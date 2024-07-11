@@ -1,0 +1,9 @@
+name: dem
+channels:
+  - conda-forge
+  - nodefaults  # force everything to come from conda-forge channel
+dependencies:
+  - ipykernel  # to use the conda environment in Jupyter
+  - pip~=24.0
+  - pip:
+    - git+https://github.com/MAAP-Project/maap-py.git@v3.1.5

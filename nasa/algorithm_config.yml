@@ -1,0 +1,24 @@
+algorithm_description: Fetch DEM tiles within a bounding box from the Copernicus
+  DEM in the AWS Open Data registry, stitch them together with GDAL, create a
+  single GeoTIFF DEM named 'dem.tif', and optionally perform intense, multi-core
+  computations, profiled with the Scalene profiler.
+algorithm_name: get-dem
+algorithm_version: 0.2.0
+repository_url: https://github.com/MAAP-Project/get-dem.git
+docker_container_url: mas.maap-project.org/root/maap-workspaces/base_images/vanilla:v3.1.4
+disk_space: 20GB
+queue: maap-dps-worker-32gb
+build_command: get-dem/nasa/build-env.sh
+run_command: get-dem/nasa/run.sh
+inputs:
+  config: []
+  file: []
+  positional:
+  - name: bbox
+    description: Bounding box as 'LEFT BOTTOM RIGHT TOP'
+    default: ''
+    required: true
+  - name: compute
+    description: Flag to perform intense, multi-core computations (any non-empty value will enable this)
+    default: ''
+    required: false
