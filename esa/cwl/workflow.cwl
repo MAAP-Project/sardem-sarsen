@@ -35,12 +35,12 @@ $graph:
   id: driver-command
 
   inputs:
-    input_dir:
+    stac_catalog_folder:
       type: Directory
       inputBinding:
         position: 2
         prefix: --stac_catalog_folder
-    s_bbox:
+    bbox:
       type: string
       inputBinding:
         position: 1
