@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - mlucas/nasa-ogc
+
+jobs:
+  build_app_pack:
+    environment: DIT
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./actions/action.yml
