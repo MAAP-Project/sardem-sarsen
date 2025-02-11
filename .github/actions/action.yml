@@ -1,6 +1,6 @@
 # action.yml
 name: "Build OGC Application Package"
-description: "A GitHub Action to build an OGC Application Package"
+description: "A GitHub Action to build an OGC Application Package."
 inputs:
   algorithm-config-path:
     description: "Path to the algorithm configuration file"
@@ -9,6 +9,9 @@ inputs:
     description: "GitHub token for authentication"
     required: true
 
+permissions:
+  contents: write
+  
 runs:
   using: "composite"
   steps:
@@ -32,7 +35,7 @@ runs:
       shell: bash
 
     - name: List
-      run: pwd
+      run: ls -la
       shell: bash
 
     - name: Source build config environment variables
@@ -56,14 +59,6 @@ runs:
     - name: Printenv
       run: printenv
       shell: bash
-
-    # - name: Extract metadata (tags, labels) for Docker
-    #   id: meta
-    #   uses: docker/metadata-action@v5
-    #   with:
-    #     images: |
-    #       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-    #     tags: algorithm
 
     - name: Build and push algorithm Docker image
       id: push-algorithm
