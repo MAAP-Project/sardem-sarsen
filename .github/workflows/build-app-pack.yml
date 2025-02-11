@@ -11,4 +11,4 @@ jobs:
       - name: Checkout repo content
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/
+      - uses: /.github/actions/
