@@ -27,9 +27,9 @@ runs:
         pip list
       shell: bash
 
-    # - name: Generate build config for algorithm
-    #   run: python3 ${{ github.action_path }}/generate_build_config.py ${{ inputs.algorithm-config-path }}
-    #   shell: bash
+    - name: Generate build config for algorithm
+      run: python3 ${{ github.action_path }}/generate_build_config.py nasa/algorithm_config.yml
+      shell: bash
 
     # - name: Source build config environment variables
     #   uses: c-py/action-dotenv-to-setenv@v5
