@@ -34,23 +34,6 @@ runs:
       run: python3 ${{ github.action_path }}/generate_build_config.py nasa/algorithm_config.yml
       shell: bash
 
-    - name: List
-      run: ls -la
-      shell: bash
-
-    - name: Configure Git
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-      shell: bash
-
-    - name: Commit and push process.cwl
-      run: |
-        git add process.cwl
-        git commit -m "Added process.cwl via github actions"
-        git push
-      shell: bash
-
     - name: Source build config environment variables
       uses: c-py/action-dotenv-to-setenv@v5
       with:
@@ -68,6 +51,23 @@ runs:
       shell: bash
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
+
+    - name: List
+      run: ls -la
+      shell: bash
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+      shell: bash
+
+    - name: Commit and push process.cwl
+      run: |
+        git add process.cwl
+        git commit -m "Added process.cwl via github actions"
+        git push
+      shell: bash
 
     - name: Printenv
       run: printenv
