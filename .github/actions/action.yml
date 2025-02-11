@@ -78,5 +78,5 @@ runs:
           REPO_URL_WITH_TOKEN=${{ env.REPO_URL_WITH_TOKEN }}
           BUILD_CMD=${{ env.BUILD_CMD }}
         push: true
-        tags: ${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
+        tags: ghcr.io/${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
         labels: ${{ steps.meta.outputs.labels }}
