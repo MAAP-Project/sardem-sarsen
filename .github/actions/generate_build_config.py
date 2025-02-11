@@ -12,7 +12,6 @@ import json
 import logging
 import json
 import os
-from ogc_app_pack import AppPackGenerator
 
 logging.basicConfig(
     level=logging.DEBUG,
