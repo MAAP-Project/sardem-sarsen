@@ -57,38 +57,26 @@ runs:
       run: ls -la
       shell: bash
 
-    # - name: Extract metadata (tags, labels) for Docker
-    #   id: meta
-    #   uses: docker/metadata-action@v5
-    #   with:
-    #     images: |
-    #       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-    #     tags: algorithm
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: |
+          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        tags: algorithm
 
-    # - name: Build and push algorithm Docker image
-    #   id: push-algorithm
-    #   uses: docker/build-push-action@v5
-    #   with:
-    #     context: .
-    #     file: docker/Dockerfile.algorithm
-    #     build-args: |
-    #       BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
-    #       REPO_NAME=${{ env.REPO_NAME }}
-    #       BRANCH=${{ env.BRANCH }}
-    #       REPO_URL_WITH_TOKEN=${{ env.REPO_URL_WITH_TOKEN }}
-    #       BUILD_CMD=${{ env.BUILD_CMD }}
-    #     push: true
-    #     tags: ${{ env.REGISTRY }}/${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
-    #     labels: ${{ steps.meta.outputs.labels }}
-
-    # - name: Build and push OGC application package Docker image
-    #   id: push-ogc_app_pack
-    #   uses: docker/build-push-action@v5
-    #   with:
-    #     context: .
-    #     file: docker/Dockerfile.ogc
-    #     build-args: |
-    #       PROCESS_CWL=${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}.process.cwl
-    #     push: true
-    #     tags: ${{ env.REGISTRY }}/ogc_${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
-    #     labels: ${{ steps.meta.outputs.labels }}
+    - name: Build and push algorithm Docker image
+      id: push-algorithm
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: docker/Dockerfile.algorithm
+        build-args: |
+          BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
+          REPO_NAME=${{ env.REPO_NAME }}
+          BRANCH=${{ env.BRANCH }}
+          REPO_URL_WITH_TOKEN=${{ env.REPO_URL_WITH_TOKEN }}
+          BUILD_CMD=${{ env.BUILD_CMD }}
+        push: true
+        tags: ${{ env.REGISTRY }}/${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
+        labels: ${{ steps.meta.outputs.labels }}
