@@ -42,12 +42,14 @@ runs:
       run: |
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
+      shell: bash
 
     - name: Commit and push process.cwl
       run: |
         git add process.cwl
         git commit -m "Added process.cwl via github actions"
         git push
+      shell: bash
 
     - name: Source build config environment variables
       uses: c-py/action-dotenv-to-setenv@v5
