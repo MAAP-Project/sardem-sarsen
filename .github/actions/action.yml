@@ -31,6 +31,10 @@ runs:
       run: python3 ${{ github.action_path }}/generate_build_config.py nasa/algorithm_config.yml
       shell: bash
 
+    - name: Printenv
+      run: printenv
+      shell: bash
+
     - name: Source build config environment variables
       uses: c-py/action-dotenv-to-setenv@v5
       with:
