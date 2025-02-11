@@ -47,11 +47,15 @@ runs:
         username: ${{ github.repository_owner }}
         password: ${{ github.token }}
 
-    # - name: Generate OGC application package process CWL
-    #   run: python3 ${{ github.action_path }}/generate_app_pack.py ${{ inputs.algorithm-config-path }} ${{ env.REPO_NAME }}:${{ env.BRANCH }}
-    #   shell: bash
-    #   env:
-    #     GITHUB_ACTION_PATH: ${{ github.action_path }}
+    - name: Generate OGC application package process CWL
+      run: python3 ${{ github.action_path }}/generate_app_pack.py nasa/algorithm_config.yml process.cwl ${{ github.action_path }}/templates/process.cwl
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+
+    - name: List
+      run: ls -la
+      shell: bash
 
     # - name: Extract metadata (tags, labels) for Docker
     #   id: meta
