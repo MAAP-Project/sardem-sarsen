@@ -53,8 +53,8 @@ runs:
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
 
-    - name: List
-      run: ls -la
+    - name: Printenv
+      run: printenv
       shell: bash
 
     - name: Extract metadata (tags, labels) for Docker
@@ -70,7 +70,7 @@ runs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        file: docker/Dockerfile.algorithm
+        file: nasa/Dockerfile
         build-args: |
           BASE_IMAGE_NAME=${{ env.BASE_IMAGE_NAME }}
           REPO_NAME=${{ env.REPO_NAME }}
