@@ -45,7 +45,7 @@ runs:
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ github.token }}
 
     # - name: Generate OGC application package process CWL
     #   run: python3 ${{ github.action_path }}/generate_app_pack.py ${{ inputs.algorithm-config-path }} ${{ env.REPO_NAME }}:${{ env.BRANCH }}
