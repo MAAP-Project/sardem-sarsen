@@ -11,4 +11,5 @@ jobs:
       - name: Checkout repo content
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/
+      - name: Use OGC App Pack Generator Action
+        uses: MAAP-Project/ogc-app-pack-generator@feature/create-action
