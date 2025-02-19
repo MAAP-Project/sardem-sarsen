@@ -10,9 +10,6 @@ author: arthurduf
 contributor: arthurduf
 license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 release_notes: None
-env_def: [
-  PATH: "/opt/conda/bin:/opt/conda/condabin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-] 
 run_command: /app/sardem-sarsen/sardem-sarsen.sh
 inputs:
   - name: bbox
