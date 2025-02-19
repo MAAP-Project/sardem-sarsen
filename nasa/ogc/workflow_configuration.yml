@@ -1,4 +1,4 @@
-# Input file for OGC application package generator
+# Input params for OGC application package generator
 # The information provided in this file supports CWL and OGC best practices
 algorithm_description: This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus.
 algorithm_name: sardem-sarsen
@@ -11,6 +11,10 @@ contributor: arthurduf
 license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 release_notes: None
 run_command: /app/sardem-sarsen/sardem-sarsen.sh
+ram_min: 5 # mebibytes
+cores_min: 1
+outdir_max: 20 # mebibytes
+
 inputs:
   - name: bbox
     doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
@@ -20,6 +24,7 @@ inputs:
     doc: STAC catalog folder
     label: catalog folder
     type: Directory
+
 outputs:
   - name: out
     type: Directory

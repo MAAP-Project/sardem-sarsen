@@ -15,5 +15,6 @@ jobs:
       - name: Use OGC App Pack Generator Action
         uses: MAAP-Project/ogc-app-pack-generator@feature/create-action
         with:
+          # Specify action inputs
           workflow-configuration-path: nasa/ogc/workflow_configuration.yml
           dockerfile-path: nasa/Dockerfile
