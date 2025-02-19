@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - mlucas/nasa-ogc
+  workflow_dispatch:
 
 jobs:
   build_app_pack:
