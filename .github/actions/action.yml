@@ -46,33 +46,6 @@ runs:
         username: ${{ github.repository_owner }}
         password: ${{ github.token }}
 
-    - name: Generate OGC application package process CWL
-      run: python3 ${{ github.action_path }}/generate_app_pack.py nasa/algorithm_config.yml process.cwl ${{ github.action_path }}/templates/process.cwl
-      shell: bash
-      env:
-        GITHUB_ACTION_PATH: ${{ github.action_path }}
-
-    - name: List
-      run: ls -la
-      shell: bash
-
-    - name: Configure Git
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-      shell: bash
-
-    - name: Commit and push process.cwl
-      run: |
-        git add process.cwl
-        git commit -m "Added process.cwl via github actions"
-        git push
-      shell: bash
-
-    - name: Printenv
-      run: printenv
-      shell: bash
-
     - name: Build and push algorithm Docker image
       id: push-algorithm
       uses: docker/build-push-action@v5
@@ -88,3 +61,22 @@ runs:
         push: true
         tags: ghcr.io/maap-project/${{ env.ALGORITHM_NAME }}.${{ env.BRANCH }}:latest
         labels: ${{ steps.meta.outputs.labels }}
+
+    - name: Generate OGC application package process CWL
+      run: python3 ${{ github.action_path }}/generate_app_pack.py nasa/algorithm_config.yml process.cwl ${{ github.action_path }}/templates/process.cwl
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+      shell: bash
+
+    - name: Commit and push process.cwl
+      run: |
+        git add process.cwl
+        git commit -m "Added process.cwl via github actions"
+        git push
+      shell: bash

@@ -2,16 +2,18 @@ cwlVersion: v1.2
 $graph:
 - class: Workflow
   label: sardem-sarsen
-  doc: sardem-sarsen algorithm
+  doc: This application is designed to process Synthetic Aperture Radar (SAR) data
+    from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
+    Model (DEM) obtained from Copernicus.
   id: sardem-sarsen
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-      label: Bounding box as 'LEFT BOTTOM RIGHT TOP'
+      label: bounding box
       type: string
     stac_catalog_folder:
       doc: STAC catalog folder
-      label: STAC catalog folder
+      label: catalog folder
       type: Directory
   outputs:
     out:
@@ -19,14 +21,14 @@ $graph:
       outputSource: process/outputs_result
   steps:
     process:
-      run: '#process'
+      run: '#main'
       in:
         bbox: bbox
         stac_catalog_folder: stac_catalog_folder
       out:
       - outputs_result
 - class: CommandLineTool
-  id: process
+  id: main
   requirements:
     DockerRequirement:
       dockerPull: sardem-sarsen
@@ -36,10 +38,9 @@ $graph:
       envDef:
         PATH: /opt/conda/bin:/opt/conda/condabin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
-  arguments: []
   inputs:
     bbox:
-      type: Directory
+      type: string
       inputBinding:
         position: 1
         prefix: --bbox
@@ -55,6 +56,15 @@ $graph:
       type: Directory
 $namespaces:
   s: https://schema.org/
-s:softwareVersion: 1.0.0
-schemas:
+  s:author: arthurduf
+  s:contributor: arthurduf
+  s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
+  s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
+  s:dateCreated: 2025-02-18
+  s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
+  s:softwareVersion: 1.0.0
+  s:version: mlucas/nasa_ogc
+  s:releaseNotes: None
+  s:keywords: ogc, sar
+$schemas:
 - http://schema.org/version/9.0/schemaorg-current-http.rdf
