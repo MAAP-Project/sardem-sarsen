@@ -34,6 +34,10 @@ $graph:
       dockerPull: ghcr.io/maap-project/sardem-sarsen.mlucas/nasa-ogc:latest
     NetworkAccess:
       networkAccess: true
+    ResourceRequirement:
+      ramMin: 5
+      coresMin: 1
+      outdirMax: 20
   baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
   inputs:
     bbox:
