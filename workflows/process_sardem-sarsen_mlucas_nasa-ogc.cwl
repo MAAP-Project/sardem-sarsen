@@ -55,8 +55,12 @@ $graph:
       outputBinding:
         glob: ./output*
       type: Directory
-s:author: arthurduf
-s:contributor: arthurduf
+s:author:
+- class: s:Person
+  s:name: arthurduf
+s:contributor:
+- class: s:Person
+  s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
 s:dateCreated: 2025-02-21
