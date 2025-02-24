@@ -4,7 +4,7 @@ $graph:
   label: sardem-sarsen
   doc: This application is designed to process Synthetic Aperture Radar (SAR) data
     from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
-    Model (DEM) obtained from Copernicus.
+    Model (DEM) obtained from Copernicus. 11:50
   id: sardem-sarsen
   inputs:
     bbox:
@@ -63,7 +63,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:dateCreated: 2025-02-21
+s:dateCreated: 2025-02-24
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas/nasa_ogc
