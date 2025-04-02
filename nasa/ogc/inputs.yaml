@@ -1,0 +1,4 @@
+bbox: "-118.06817 34.22169 -118.05801 34.22822"
+stac_catalog_folder:
+  class: Directory
+  path: catalog_dir
