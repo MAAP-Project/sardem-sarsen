@@ -45,6 +45,7 @@ $graph:
       inputBinding:
         position: 1
         prefix: --bbox
+      default: -118.06817 34.22169 -118.05801 34.22822
     stac_catalog_folder:
       type: Directory
       inputBinding:
@@ -63,7 +64,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:dateCreated: 2025-04-02
+s:dateCreated: 2025-04-10
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas/nasa_ogc
