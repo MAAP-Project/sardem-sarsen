@@ -21,11 +21,6 @@ inputs:
     label: bounding box
     type: string
     default: "-118.06817 34.22169 -118.05801 34.22822"
-  - name: bbox
-    doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-    label: bounding box
-    type: string
-    default: "-118.06817 34.22169 -118.05801 34.22822"
   - name: stac_catalog_folder
     doc: STAC catalog folder
     label: catalog folder
