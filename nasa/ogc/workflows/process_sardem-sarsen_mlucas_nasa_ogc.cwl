@@ -15,6 +15,10 @@ $graph:
       doc: STAC catalog folder
       label: catalog folder
       type: Directory
+    stac_asset_name:
+      doc: STAC asset name
+      label: asset name
+      type: string?
   outputs:
     out:
       type: Directory
@@ -25,6 +29,7 @@ $graph:
       in:
         bbox: bbox
         stac_catalog_folder: stac_catalog_folder
+        stac_asset_name: stac_asset_name
       out:
       - outputs_result
 - class: CommandLineTool
@@ -54,10 +59,16 @@ $graph:
       default:
         class: Directory
         path: catalog_dir
+    stac_asset_name:
+      type: string?
+      default: PRODUCT
+      inputBinding:
+        position: 3
+        prefix: --stac_asset_name
   outputs:
     outputs_result:
       outputBinding:
-        glob: ./output*
+        glob: ./output/
       type: Directory
 s:author:
 - class: s:Person
