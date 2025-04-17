@@ -63,7 +63,7 @@ $graph:
   outputs:
     outputs_result:
       outputBinding:
-        glob: ./output*
+        glob: ./output/
       type: Directory
 $namespaces:
   s: https://schema.org/
