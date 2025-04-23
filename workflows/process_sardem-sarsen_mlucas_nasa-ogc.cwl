@@ -9,7 +9,7 @@ $graph:
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-      label: bounding box
+      label: Bounding box
       type: string
     stac_catalog_folder:
       doc: STAC catalog folder
@@ -64,7 +64,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:dateCreated: 2025-04-15
+s:dateCreated: 2025-04-23
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas/nasa_ogc
