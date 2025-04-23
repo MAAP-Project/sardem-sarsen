@@ -18,7 +18,7 @@ outdir_max: 20 # mebibytes
 inputs:
   - name: bbox
     doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-    label: Bounding ox
+    label: Bounding box
     type: string
     default: "-118.06817 34.22169 -118.05801 34.22822"
   - name: stac_catalog_folder
