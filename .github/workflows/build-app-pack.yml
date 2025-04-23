@@ -24,3 +24,4 @@ jobs:
           # Specify action inputs
           algorithm-configuration-path: nasa/ogc/algorithm_config.yml
           dockerfile-path: nasa/Dockerfile
+          deploy-app-pack: true
