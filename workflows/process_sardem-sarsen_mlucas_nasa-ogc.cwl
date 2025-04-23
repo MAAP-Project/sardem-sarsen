@@ -9,7 +9,7 @@ $graph:
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-      label: bounding box
+      label: Bounding box
       type: string
     stac_catalog_folder:
       doc: STAC catalog folder
