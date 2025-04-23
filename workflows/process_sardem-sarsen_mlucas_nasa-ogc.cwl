@@ -13,7 +13,7 @@ $graph:
       type: string
     stac_catalog_folder:
       doc: STAC catalog folder
-      label: catalog folder
+      label: Catalog folder
       type: Directory
   outputs:
     out:
