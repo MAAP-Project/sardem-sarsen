@@ -1,6 +1,6 @@
 # Input params for OGC application package generator
 # The information provided in this file supports CWL and OGC best practices
-algorithm_description: This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus. 1:46
+algorithm_description: This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus.
 algorithm_name: sardem-sarsen
 algorithm_version: mlucas/nasa_ogc
 keywords: ogc, sar
@@ -18,13 +18,19 @@ outdir_max: 20 # mebibytes
 inputs:
   - name: bbox
     doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-    label: Bounding box
+    label: bounding box
     type: string
-    default: "-118.06817 34.22169 -118.05801 34.22822"
+    default: -118.06817 34.22169 -118.05801 34.22822
   - name: stac_catalog_folder
     doc: STAC catalog folder
-    label: Catalog folder
+    label: catalog folder
     type: Directory
+    default: catalog_dir
+  - name: stac_asset_name
+    doc: STAC asset name
+    label: asset name
+    type: string?
+    default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
 
 outputs:
   - name: out

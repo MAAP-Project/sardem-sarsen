@@ -161,3 +161,4 @@ cython_debug/
 
 
 output/
+local_stac_catalog/

@@ -2,3 +2,4 @@ bbox: "-118.06817 34.22169 -118.05801 34.22822"
 stac_catalog_folder:
   class: Directory
   path: catalog_dir
+stac_asset_name: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
