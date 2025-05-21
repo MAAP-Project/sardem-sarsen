@@ -18,7 +18,7 @@ RUN mkdir -p /app/sardem-sarsen
 # Copy application files to the /opt directory.
 COPY ./nasa/sardem-sarsen.sh /app/sardem-sarsen
 COPY ./sardem-sarsen.py /app/sardem-sarsen/sardem-sarsen.py
-COPY ./nasa/ogc/catalog_dir/ /app/sardem-sarsen/catalog_dir/
+COPY ./catalog_dir/ /app/sardem-sarsen/catalog_dir/
 
 # Assign execute permissions to the scripts.
 RUN chmod +x /app/sardem-sarsen/sardem-sarsen.sh && chmod +x /app/sardem-sarsen/sardem-sarsen.py
