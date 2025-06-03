@@ -11,19 +11,14 @@ $graph:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
       label: bounding box
       type: string
-      default: -118.06817 34.22169 -118.05801 34.22822
     stac_catalog_folder:
       doc: STAC catalog folder
       label: catalog folder
       type: Directory
-      default:
-        class: Directory
-        path: catalog_dir
     stac_asset_name:
       doc: STAC asset name
       label: asset name
       type: string?
-      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     out:
       type: Directory
@@ -55,21 +50,16 @@ $graph:
       inputBinding:
         position: 1
         prefix: --bbox
-      default: -118.06817 34.22169 -118.05801 34.22822
     stac_catalog_folder:
       type: Directory
       inputBinding:
         position: 2
         prefix: --stac_catalog_folder
-      default:
-        class: Directory
-        path: catalog_dir
     stac_asset_name:
       type: string?
       inputBinding:
         position: 3
         prefix: --stac_asset_name
-      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     outputs_result:
       outputBinding:
@@ -83,7 +73,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:dateCreated: 2025-05-21
+s:dateCreated: 2025-06-03
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas_nasa_ogc

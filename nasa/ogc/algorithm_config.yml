@@ -20,17 +20,14 @@ inputs:
     doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
     label: bounding box
     type: string
-    default: -118.06817 34.22169 -118.05801 34.22822
   - name: stac_catalog_folder
     doc: STAC catalog folder
     label: catalog folder
     type: Directory
-    default: catalog_dir
   - name: stac_asset_name
     doc: STAC asset name
     label: asset name
     type: string?
-    default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
 
 outputs:
   - name: out
