@@ -2,13 +2,14 @@ on:
   push:
     branches:
       - mlucas/nasa-ogc
-    # tags:
-    #   - '*'
+      - develop
+    tags:
+      - '*'
   workflow_dispatch:
     inputs:
-    environment:
-      required: true
-      default: 'DIT'
+      environment:
+        required: true
+        default: 'DIT'
 
 jobs:
   build_app_pack:
@@ -24,7 +25,7 @@ jobs:
           # Specify action inputs
           algorithm-configuration-path: nasa/ogc/algorithm_config.yml
           dockerfile-path: nasa/Dockerfile
-          deploy-app-pack: true
+          deploy-app-pack: false
         env:
           # MAAP PGT token is required to deploy the process
           MAAP_PGT: ${{ secrets.MAAP_PGT_MLUCAS }}
