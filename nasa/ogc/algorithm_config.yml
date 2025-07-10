@@ -2,7 +2,7 @@
 # The information provided in this file supports CWL and OGC best practices
 algorithm_description: This application is designed to process Synthetic Aperture Radar (SAR) data from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation Model (DEM) obtained from Copernicus.
 algorithm_name: sardem-sarsen
-algorithm_version: mlucas/nasa_ogc
+algorithm_version: 1.2
 keywords: ogc, sar
 code_repository: https://github.com/MAAP-Project/sardem-sarsen.git
 citation: https://github.com/MAAP-Project/sardem-sarsen.git
