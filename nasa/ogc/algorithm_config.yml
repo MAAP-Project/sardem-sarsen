@@ -11,6 +11,7 @@ contributor: arthurduf
 license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 release_notes: None
 run_command: /app/sardem-sarsen/sardem-sarsen.sh
+algorithm_container_url: my_algo_container:main
 ram_min: 5 # mebibytes
 cores_min: 1
 outdir_max: 20 # mebibytes
