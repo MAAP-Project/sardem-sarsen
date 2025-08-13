@@ -36,7 +36,7 @@ $graph:
   id: main
   requirements:
     DockerRequirement:
-      dockerPull: my_algo_container:main
+      dockerPull: ghcr.io/maap-project/sardem-sarsen:mlucas_nasa-ogc
     NetworkAccess:
       networkAccess: true
     ResourceRequirement:
@@ -73,7 +73,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: d6f771886327c3cf2c4210d7c9736eebdabeca7b
+s:commitHash: ad262e7eb0bc6b2512899efc4e69e6150075865b
 s:dateCreated: 2025-08-13
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
