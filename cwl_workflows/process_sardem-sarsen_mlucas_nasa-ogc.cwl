@@ -47,7 +47,7 @@ $graph:
       ramMin: 5
       coresMin: 1
       outdirMax: 20
-  baseCommand: sardem-sarsen/sardem-sarsen.sh
+  baseCommand: /sardem-sarsen/sardem-sarsen.sh
   inputs:
     bbox:
       type: string

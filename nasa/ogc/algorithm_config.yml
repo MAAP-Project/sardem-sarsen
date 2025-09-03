@@ -10,7 +10,7 @@ author: arthurduf
 contributor: arthurduf
 license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 release_notes: None
-run_command: sardem-sarsen/sardem-sarsen.sh
+run_command: /sardem-sarsen/sardem-sarsen.sh
 ram_min: 5 # mebibytes
 cores_min: 1
 outdir_max: 20 # mebibytes
