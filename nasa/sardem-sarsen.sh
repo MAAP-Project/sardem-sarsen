@@ -13,7 +13,7 @@ outdir="output"
 mkdir -p "${outdir}"
 
 # shellcheck disable=SC2068
-conda run --live-stream -n dem python sardem-sarsen/sardem-sarsen.py $@ -o "${outdir}"
+conda run --live-stream -n dem python sardem-sarsen.py $@ -o "${outdir}"
 
 # print output dir for debug
 find "${outdir}" -type f
