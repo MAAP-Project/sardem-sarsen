@@ -9,16 +9,20 @@ $graph:
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
-      label: bounding box
+      label: Bounding box
       type: string
-    stac_catalog_folder:
-      doc: STAC catalog folder
-      label: catalog folder
-      type: Directory
+      default: -118.06817 34.22169 -118.05801 34.22822
+    sentinel_granule:
+      doc: Sentinel granule URL
+      label: Sentinel granule URL
+      type: string
+      default: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
+        ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       doc: STAC asset name
       label: asset name
       type: string?
+      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     out:
       type: Directory
@@ -28,7 +32,7 @@ $graph:
       run: '#main'
       in:
         bbox: bbox
-        stac_catalog_folder: stac_catalog_folder
+        sentinel_granule: sentinel_granule
         stac_asset_name: stac_asset_name
       out:
       - outputs_result
@@ -43,23 +47,27 @@ $graph:
       ramMin: 5
       coresMin: 1
       outdirMax: 20
-  baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
+  baseCommand: sardem-sarsen/sardem-sarsen.sh
   inputs:
     bbox:
       type: string
       inputBinding:
         position: 1
         prefix: --bbox
-    stac_catalog_folder:
-      type: Directory
+      default: -118.06817 34.22169 -118.05801 34.22822
+    sentinel_granule:
+      type: string
       inputBinding:
         position: 2
-        prefix: --stac_catalog_folder
+        prefix: --sentinel_granule
+      default: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
+        ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       type: string?
       inputBinding:
         position: 3
         prefix: --stac_asset_name
+      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     outputs_result:
       outputBinding:
@@ -73,11 +81,11 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 1306ecd7d0020e59652206eb4d7576e4ad299c57
-s:dateCreated: 2025-08-13
+s:commitHash: 415e501ed70f589d1d0251e07b851a09eb35c3c4
+s:dateCreated: 2025-09-03
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
-s:version: 1.2
+s:version: mlucas_nasa-ogc
 s:releaseNotes: None
 s:keywords: ogc, sar
 $namespaces:
