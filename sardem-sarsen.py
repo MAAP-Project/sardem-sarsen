@@ -29,7 +29,7 @@ logger = logging.getLogger("sardem-sarsen")
 
 @dataclass(frozen=True, kw_only=True)
 class Args:
-    stac_catalog_folder: str
+    sentinel_granule: str
     bbox: tuple[float, float, float, float]
     stac_asset_name: str
     out_dir: str
@@ -197,10 +197,10 @@ def parse_args() -> Args:
 
     parser.add_argument("-v", "--version", action="version", version=__version__)
     parser.add_argument(
-        "--stac_catalog_folder",
+        "--sentinel_granule",
         type=str,
         help="path to the STAC directory (containing catalog.json, item.json, and Sentinel-1 GRD product)",
-        metavar="stac_catalog_folder",
+        metavar="sentinel_granule",
         required=False,
     )
     parser.add_argument(
@@ -232,7 +232,7 @@ def parse_args() -> Args:
     raw_args = parser.parse_args()
 
     return Args(
-        stac_catalog_folder=raw_args.stac_catalog_folder,
+        sentinel_granule=raw_args.sentinel_granule,
         bbox=raw_args.bbox,
         stac_asset_name=raw_args.stac_asset_name,
         out_dir=raw_args.out_dir,
@@ -375,7 +375,7 @@ def main() -> None:
     args = parse_args()
 
     # Step 2: Get S1 GRD product paths
-    catalog_path = os.path.join(args.stac_catalog_folder,"catalog.json")
+    catalog_path = os.path.join(args.sentinel_granule,"catalog.json")
     s1_grd_paths = get_s1_grd_path(catalog_path, args.stac_asset_name)
 
     # Step 3: Download DEM
