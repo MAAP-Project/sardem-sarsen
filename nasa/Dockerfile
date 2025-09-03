@@ -15,7 +15,7 @@ RUN conda env update --quiet --solver libmamba -n dem -f /tmp/environment.yml &&
 RUN mkdir -p sardem-sarsen
 
 # Copy application files to the directory
-COPY ./nasa/sardem-sarsen.sh sardem-sarsen/sardem-sarsen.sh
+COPY ./sardem-sarsen.sh sardem-sarsen/sardem-sarsen.sh
 COPY ./sardem-sarsen.py sardem-sarsen/sardem-sarsen.py
 
 # Assign execute permissions to the scripts
