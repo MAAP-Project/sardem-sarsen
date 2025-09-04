@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - mlucas/nasa-ogc
+      - develop
+      - main
+    tags:
+      - '*'
+  workflow_dispatch:
+    inputs:
+      environment:
+        required: true
+        default: 'DIT'
+
+jobs:
+  build_app_pack:
+    environment: DIT
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo content
+        uses: actions/checkout@v4
+
+      - name: Use OGC App Pack Generator Action
+        uses: MAAP-Project/ogc-app-pack-generator@feature/existing-container-option
+        with:
+          # Specify action inputs
+          algorithm-configuration-path: nasa/ogc/algorithm_config.yml
+          dockerfile-path: nasa/Dockerfile
+          deploy-app-pack: true
+          app-pack-register-endpoint: https://api.dit.maap-project.org/api/ogc/processes
+        env:
+          # MAAP PGT token is required to deploy the process
+          MAAP_PGT: ${{ secrets.MAAP_PGT_MLUCAS }}
