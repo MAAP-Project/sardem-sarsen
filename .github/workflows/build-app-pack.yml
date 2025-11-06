@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - nasa-ogc
-      - main
     tags:
       - '*'
   workflow_dispatch:
