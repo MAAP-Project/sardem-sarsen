@@ -36,7 +36,7 @@ $graph:
   id: main
   requirements:
     DockerRequirement:
-      dockerPull: sardem-sarsen:esa-ogc-0.1
+      dockerPull: ghcr.io/maap-project/sardem-sarsen:esa-ogc-0.1
     NetworkAccess:
       networkAccess: true
     EnvVarRequirement:
