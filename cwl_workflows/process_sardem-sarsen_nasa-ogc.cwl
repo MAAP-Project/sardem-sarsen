@@ -11,14 +11,20 @@ $graph:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
       label: Bounding box
       type: string
+      default: -118.06817 34.22169 -118.05801 34.22822
     sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
       type: Directory
+      default:
+        class: Directory
+        path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
+          ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       doc: STAC asset name
       label: asset name
       type: string?
+      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     out:
       type: Directory
@@ -79,7 +85,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 4c136eec52b387b076ef86eb80c8b008e1bc0659
+s:commitHash: 63dec2850f6a32e1508f69edf8784e6c80b2bb93
 s:dateCreated: 2025-11-13
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
