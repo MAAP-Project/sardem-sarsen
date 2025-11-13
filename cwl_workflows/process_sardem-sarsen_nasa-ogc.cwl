@@ -15,9 +15,11 @@ $graph:
     sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
-      type: string
-      default: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
-        ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
+      type: Directory
+      default:
+        class: Directory
+        path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
+          ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       doc: STAC asset name
       label: asset name
@@ -56,12 +58,14 @@ $graph:
         prefix: --bbox
       default: -118.06817 34.22169 -118.05801 34.22822
     sentinel_granule:
-      type: string
+      type: Directory
       inputBinding:
         position: 2
         prefix: --sentinel_granule
-      default: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
-        ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
+      default:
+        class: Directory
+        path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
+          ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       type: string?
       inputBinding:
@@ -81,8 +85,8 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 08b0f4bda870ad6c0f6df798d17d55ede536a21b
-s:dateCreated: 2025-11-11
+s:commitHash: 4c136eec52b387b076ef86eb80c8b008e1bc0659
+s:dateCreated: 2025-11-13
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas_nasa-ogc
