@@ -11,20 +11,14 @@ $graph:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
       label: Bounding box
       type: string
-      default: -118.06817 34.22169 -118.05801 34.22822
     sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
       type: Directory
-      default:
-        class: Directory
-        path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
-          ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       doc: STAC asset name
       label: asset name
       type: string?
-      default: edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20250330T171421_20250330T171446_058537_073E4F_985B
   outputs:
     out:
       type: Directory
