@@ -85,8 +85,8 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 63dec2850f6a32e1508f69edf8784e6c80b2bb93
-s:dateCreated: 2025-11-13
+s:commitHash: 2306d9ad46bbdd801f5ec411ecb41822dcce7f4f
+s:dateCreated: 2025-12-03
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
 s:version: mlucas_nasa-ogc
