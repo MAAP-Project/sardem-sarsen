@@ -1,7 +1,7 @@
 cwlVersion: v1.2
 $graph:
 - class: Workflow
-  label: Sardem Sarsen Demo 08
+  label: Sardem Sarsen Demo 09
   doc: This application is designed to process Synthetic Aperture Radar (SAR) data
     from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
     Model (DEM) obtained from Copernicus.
@@ -36,7 +36,7 @@ $graph:
   id: main
   requirements:
     DockerRequirement:
-      dockerPull: ghcr.io/maap-project/sardem-sarsen:esa-ogc-0.1
+      dockerPull: ghcr.io/maap-project/sardem-sarsen:nasa-ogc
     NetworkAccess:
       networkAccess: true
     EnvVarRequirement:
