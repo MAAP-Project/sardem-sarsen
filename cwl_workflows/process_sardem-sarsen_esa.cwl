@@ -74,7 +74,7 @@ s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
 s:dateCreated: 2025-02-18
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.1.0
-s:version: mlucas/nasa_ogc
+s:version: esa
 s:releaseNotes: None
 s:keywords: ogc, sar
 $schemas:
