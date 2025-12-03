@@ -5,7 +5,7 @@ $graph:
   doc: This application is designed to process Synthetic Aperture Radar (SAR) data
     from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
     Model (DEM) obtained from Copernicus.
-  id: sardem-sarsen-demo-08
+  id: sardem-sarsen-demo-09
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
