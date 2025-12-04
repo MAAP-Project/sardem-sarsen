@@ -12,7 +12,7 @@ $graph:
       label: Bounding box
       type: string
       default: -118.06817 34.22169 -118.05801 34.22822
-    sentinel_granule:
+    stac_catalog_folder:
       doc: Sentinel granule URL
       label: Sentinel granule URL
       type: Directory
@@ -34,7 +34,7 @@ $graph:
       run: '#main'
       in:
         bbox: bbox
-        sentinel_granule: sentinel_granule
+        stac_catalog_folder: stac_catalog_folder
         stac_asset_name: stac_asset_name
       out:
       - outputs_result
@@ -57,11 +57,11 @@ $graph:
         position: 1
         prefix: --bbox
       default: -118.06817 34.22169 -118.05801 34.22822
-    sentinel_granule:
+    stac_catalog_folder:
       type: Directory
       inputBinding:
         position: 2
-        prefix: --sentinel_granule
+        prefix: --stac_catalog_folder
       default:
         class: Directory
         path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
