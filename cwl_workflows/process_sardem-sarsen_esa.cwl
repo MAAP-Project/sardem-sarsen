@@ -5,7 +5,7 @@ $graph:
   doc: This application is designed to process Synthetic Aperture Radar (SAR) data
     from Sentinel-1 GRD (Ground Range Detected) products using a Digital Elevation
     Model (DEM) obtained from Copernicus.
-  id: sardem-sarsen
+  id: sardem-sarsen-esa-ogc
   inputs:
     bbox:
       doc: Bounding box as 'LEFT BOTTOM RIGHT TOP'
@@ -49,7 +49,7 @@ $graph:
       ramMin: 5
       coresMin: 1
       outdirMax: 20
-  baseCommand: /sardem-sarsen/sardem-sarsen.sh
+  baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
   inputs:
     bbox:
       type: string
@@ -85,11 +85,11 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 2025_12_4
+s:commitHash: esa-ogc-1
 s:dateCreated: 2025-12-04
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
-s:version: 2025_12_4
+s:version: esa-ogc-1
 s:releaseNotes: None
 s:keywords: ogc, sar
 $namespaces:
