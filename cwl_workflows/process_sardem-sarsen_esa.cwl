@@ -43,9 +43,6 @@ $graph:
       ramMin: 5
       coresMin: 1
       outdirMax: 20
-    EnvVarRequirement:
-      envDef:
-        PATH: /opt/conda/bin:/opt/conda/condabin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
   baseCommand: /app/sardem-sarsen/sardem-sarsen.sh
   inputs:
     bbox:
@@ -67,7 +64,7 @@ $graph:
   outputs:
     outputs_result:
       outputBinding:
-        glob: ./output
+        glob: ./output*
       type: Directory
 $namespaces:
   s: https://schema.org/
