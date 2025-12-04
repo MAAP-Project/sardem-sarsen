@@ -12,7 +12,7 @@ $graph:
       label: Bounding box
       type: string
       default: -118.06817 34.22169 -118.05801 34.22822
-    stac_catalog_folder:
+    sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
       type: Directory
@@ -34,7 +34,7 @@ $graph:
       run: '#main'
       in:
         bbox: bbox
-        stac_catalog_folder: stac_catalog_folder
+        sentinel_granule: sentinel_granule
         stac_asset_name: stac_asset_name
       out:
       - outputs_result
@@ -42,7 +42,7 @@ $graph:
   id: main
   requirements:
     DockerRequirement:
-      dockerPull: ghcr.io/maap-project/sardem-sarsen:esa-ogc-0.1
+      dockerPull: ghcr.io/maap-project/sardem-sarsen:nasa-ogc
     NetworkAccess:
       networkAccess: true
     ResourceRequirement:
@@ -57,11 +57,11 @@ $graph:
         position: 1
         prefix: --bbox
       default: -118.06817 34.22169 -118.05801 34.22822
-    stac_catalog_folder:
+    sentinel_granule:
       type: Directory
       inputBinding:
         position: 2
-        prefix: --stac_catalog_folder
+        prefix: --sentinel_granule
       default:
         class: Directory
         path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
@@ -85,11 +85,11 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: test
+s:commitHash: f1873470c62ad3e181009a93591c60d9a782c902
 s:dateCreated: 2025-12-04
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
-s:version: mlucas_ogc
+s:version: mlucas_nasa-ogc
 s:releaseNotes: None
 s:keywords: ogc, sar
 $namespaces:
