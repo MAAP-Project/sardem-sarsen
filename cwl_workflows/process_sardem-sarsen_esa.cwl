@@ -39,10 +39,6 @@ $graph:
       dockerPull: ghcr.io/maap-project/sardem-sarsen:esa-ogc-0.1
     NetworkAccess:
       networkAccess: true
-    ResourceRequirement:
-      ramMin: 5
-      coresMin: 1
-      outdirMax: 20
     EnvVarRequirement:
       envDef:
         PATH: /opt/conda/bin:/opt/conda/condabin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -67,7 +63,7 @@ $graph:
   outputs:
     outputs_result:
       outputBinding:
-        glob: ./output*
+        glob: ./output
       type: Directory
 $namespaces:
   s: https://schema.org/
