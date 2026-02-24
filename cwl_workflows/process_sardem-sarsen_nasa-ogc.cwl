@@ -12,6 +12,11 @@ $graph:
       label: Bounding box
       type: string
       default: -118.06817 34.22169 -118.05801 34.22822
+    test_input:
+      doc: test input
+      label: test
+      type: number
+      default: "1"
     sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
@@ -89,7 +94,7 @@ s:commitHash: 1f2c57760b5334472b0f9d719dcb09cae99297a7
 s:dateCreated: 2025-12-04
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
-s:version: mlucas_nasa-ogc
+s:version: mlucas_test
 s:releaseNotes: None
 s:keywords: ogc, sar
 $namespaces:
