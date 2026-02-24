@@ -12,6 +12,11 @@ $graph:
       label: Bounding box
       type: string
       default: -118.06817 34.22169 -118.05801 34.22822
+    test_input:
+      doc: test
+      label: test
+      type: int
+      default: 1
     sentinel_granule:
       doc: Sentinel granule URL
       label: Sentinel granule URL
@@ -57,6 +62,12 @@ $graph:
         position: 1
         prefix: --bbox
       default: -118.06817 34.22169 -118.05801 34.22822
+    test_input:
+      type: int
+      inputBinding:
+        position: 4
+        prefix: --test_input
+      default: 1
     sentinel_granule:
       type: Directory
       inputBinding:
