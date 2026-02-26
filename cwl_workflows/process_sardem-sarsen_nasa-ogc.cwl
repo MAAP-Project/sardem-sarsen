@@ -21,10 +21,6 @@ $graph:
       doc: Sentinel granule URL
       label: Sentinel granule URL
       type: Directory
-      default:
-        class: Directory
-        path: "https://cmr.earthdata.nasa.gov/stac/ASF/collections/SENTINEL-1A_DP_GRD_HIGH_1/items/S1A_[\u2026\
-          ]20250330T171421_20250330T171446_058537_073E4F_985B-GRD_HD"
     stac_asset_name:
       doc: STAC asset name
       label: asset name
