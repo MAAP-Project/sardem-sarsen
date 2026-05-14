@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repo content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Use OGC App Pack Generator Action
         uses: MAAP-Project/ogc-app-pack-generator@chore/docs
