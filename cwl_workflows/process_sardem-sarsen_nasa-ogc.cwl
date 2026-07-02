@@ -83,7 +83,7 @@ s:contributor:
   s:name: arthurduf
 s:citation: https://github.com/MAAP-Project/sardem-sarsen.git
 s:codeRepository: https://github.com/MAAP-Project/sardem-sarsen.git
-s:commitHash: 6e1278bc6014693fe25d15eff95b5e9a4a1056d3
+s:commitHash: 9e57860bf9bfc5c206b2f7cd144588cc2d33311b
 s:dateCreated: 2026-07-02
 s:license: https://github.com/MAAP-Project/sardem-sarsen/blob/main/LICENSE
 s:softwareVersion: 1.0.0
