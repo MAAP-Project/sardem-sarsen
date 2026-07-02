@@ -20,7 +20,7 @@ jobs:
           # Specify action inputs
           algorithm-configuration-path: nasa/ogc/algorithm_config.yml
           dockerfile-path: nasa/Dockerfile
-          deploy-app-pack: true
+          deploy-app-pack: false
           app-pack-register-endpoint: https://api.uat.maap-project.org/api/ogc/processes
         env:
           # MAAP token is required to deploy the algorithm to the MAAP
