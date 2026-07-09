@@ -3,7 +3,7 @@ on:
     branches:
       - nasa-ogc
 jobs:
-  build_app_pack:
+  generate_app_pack:
     runs-on: ubuntu-latest
 
     permissions:
@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Use OGC App Pack Generator Action
-        uses: MAAP-Project/ogc-app-pack-generator@1.0.0
+        uses: MAAP-Project/ogc-app-pack-generator@chore/docs
         with:
           # Specify action inputs
           algorithm-configuration-path: nasa/ogc/algorithm_config.yml
